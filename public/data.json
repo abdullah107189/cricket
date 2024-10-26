@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.postimg.cc/GtHCz6zZ/Virat-Kohli.jpg",
+    "name": "Virat Kohli",
+    "country": "India",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "2500000",
+    "buttonText": "Choose Player"
+  },
+
+
+  {
+    "id": 2,
+    "image": "https://i.postimg.cc/nVPZMchZ/Joe-Root.jpg",
+    "name": "Joe Root",
+    "country": "England",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "2200000",
+    "buttonText": "Choose Player"
+  },
+
+
+  {
+    "id": 3,
+    "image": "https://i.postimg.cc/pr4tSk6y/Shakib-Al-Hasan.jpg",
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "2000000",
+    "buttonText": "Choose Player"
+  },
+
+
+  {
+    "id": 4,
+    "image": "https://i.postimg.cc/7ZvkMszW/Tamim-Iqbal.jpg",
+    "name": "Tamim Iqbal",
+    "country": "Bangladesh",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "2300000",
+    "buttonText": "Choose Player"
+  },
+
+
+  {
+    "id": 5,
+    "image": "https://i.postimg.cc/5NQJzdXz/Babar-Azam.jpg",
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "2100000",
+    "buttonText": "Choose Player"
+  },
+
+
+  {
+    "id": 6,
+    "image": "https://i.postimg.cc/YC1wX6fq/Ben-Stokes.jpg",
+    "name": "Ben Stokes",
+    "country": "England",
+    "role": "All-Rounder",
+    "rating": "Left-Hand-Bat",
+    "price": "2700000",
+    "buttonText": "Choose Player"
+  },
+  {
+    "id": 7,
+    "image": "https://i.postimg.cc/mhf5Mnn3/download.jpg",
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "2000000",
+    "buttonText": "Choose Player"
+  },
+  {
+    "id": 8,
+    "image": "https://i.postimg.cc/FzJ6YvTs/Steve-Smith.jpg",
+    "name": "Steve Smith",
+    "country": "Australia",
+    "role": "Batsman",
+    "rating": "Right-Hand-Bat",
+    "price": "2300000",
+    "buttonText": "Choose Player"
+  }
+
+]
