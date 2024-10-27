@@ -2,12 +2,11 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import Datas from '../datas/Datas';
 import Footer_Image from '../../assets/logo-footer.png';
+import SinglePlayers from './SinglePlayers';
 
-const Players = ({ handleBuyPlayr }) => {
+const Players = ({ handleBuyPlayr, storePlayer, handleDeletePlayer }) => {
     const [players, setPlayers] = useState([]);
     const [showPlayers, setShowPlayers] = useState(true)
-    const [selectedCount] = useState(0);
-
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -24,7 +23,7 @@ const Players = ({ handleBuyPlayr }) => {
 
     return (
         <div>
-            <div className='sticky top-20' style={{ display: 'flex', justifyContent: 'end',paddingTop:'20px', marginBottom: '20px' }}>
+            <div className='sticky top-20' style={{ display: 'flex', justifyContent: 'end', paddingTop: '20px', marginBottom: '20px' }}>
                 <button
                     className={`py-2 px-4 rounded-xl mr-2 ${showPlayers ? 'bg-yellow-400' : 'bg-gray-200'}`}
                     onClick={handleAvailableClick}
@@ -35,25 +34,38 @@ const Players = ({ handleBuyPlayr }) => {
                     className={`py-2 px-4 rounded-xl ${!showPlayers ? 'bg-yellow-400' : 'bg-gray-200'}`}
                     onClick={handleSelectedClick}
                 >
-                    Selected ({selectedCount})
+                    Selected ({storePlayer.length})
                 </button>
             </div>
 
             { }
-            {showPlayers ? (
-                <div className="grid grid-cols-3 gap-5">
-                    {players.map(player => (
-                        <Datas
-                            handleBuyPlayr={handleBuyPlayr}
-                            key={player.id}
-                            player={player} />
-                    ))}
-                </div>
-            ) : (
+            {showPlayers ?
                 <div>
-                    <h3>No Players Selected</h3>
+                    <h1 className='text-3xl font-black py-3'>Available Players</h1>
+                    <div className="grid grid-cols-3 gap-5">
+                        {players.map(player => (
+                            <Datas
+                                handleBuyPlayr={handleBuyPlayr}
+                                key={player.id}
+                                player={player} />
+                        ))}
+                    </div>
                 </div>
-            )}
+                :
+                <div className='space-y-3'>
+                    <h1 className='text-3xl font-black py-3'>Selected Player ({storePlayer.length}/6)</h1>
+                    {
+                        storePlayer.map(singleMan => <SinglePlayers
+                            key={singleMan.id}
+                            singleMan={singleMan}
+                            handleDeletePlayer={handleDeletePlayer}
+                        >
+                        </SinglePlayers>
+                        )
+                    }
+                    <button className='btn py-3' onClick={handleAvailableClick}>Add More Players</button>
+                </div>
+            }
 
             {/* part_3 */}
             <div className='mt-10'>
@@ -111,6 +123,8 @@ const Players = ({ handleBuyPlayr }) => {
 Players.propTypes = {
     handleTheButton: PropTypes.func,
     handleBuyPlayr: PropTypes.func,
+    handleDeletePlayer: PropTypes.func,
+    storePlayer: PropTypes.array,
 };
 
 export default Players;

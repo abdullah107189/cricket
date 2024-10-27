@@ -1,7 +1,6 @@
 
 import Bg_Image from '../../assets/banner-main.png';
 import './header.css'
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PropTypes from 'prop-types';
 
@@ -22,8 +21,6 @@ const Header = ({ handleTheBtn }) => {
                     </button>
                 </div>
             </div>
-
-            <ToastContainer />
         </div>
     );
 

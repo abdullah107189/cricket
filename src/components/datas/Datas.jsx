@@ -21,7 +21,7 @@ const Datas = ({ player, handleBuyPlayr }) => {
                         </div>
                         <div className='flex justify-between'>
                             <p>Price: ${price}</p>
-                            <button onClick={() => handleBuyPlayr(price)} className="btn mt-2">
+                            <button onClick={() => handleBuyPlayr(price, player)} className="btn mt-2">
 
                                 {buttonText}
                             </button>
